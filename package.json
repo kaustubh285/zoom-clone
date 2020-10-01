@@ -13,6 +13,9 @@
   "author": "Kaustubh Deshpande",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "uuid": "^8.3.0"
   }
 }

@@ -19,7 +19,6 @@ const addVideoStream = (video, stream) => {
   video.srcObject = stream;
   video.addEventListener("loadedmetadata", () => {
     video.play();
-    console.log(video);
   });
   videoGrid.appendChild(video);
 };

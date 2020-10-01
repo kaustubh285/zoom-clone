@@ -4,8 +4,10 @@ const app = express();
 
 const server = require("http").Server(app);
 
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.render("room");
 });
 
 server.listen(3030);

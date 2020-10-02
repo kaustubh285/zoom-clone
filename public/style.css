@@ -1,10 +1,140 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main__left {
+  flex: 0.8;
+  display: flex;
+
+  flex-direction: column;
+  max-width: 85vw;
+}
+
+.main__leftVideo {
+  /* background-color: #272727; */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex: 0.95;
+}
+.main__leftControls {
+  flex: 0.05;
+}
+
+.main__right {
+  flex: 0.2;
+}
+
 #video-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 video {
+  padding: 5px;
   height: 300px;
   width: 400px;
   object-fit: contain;
+}
+
+.main__leftControls {
+  justify-content: space-between;
+  color: #d2d2d2;
+  background-color: #17181a;
+  display: flex;
+  padding: 10px;
+}
+
+.main__leftControls__Block {
+  align-items: center;
+  display: flex;
+}
+
+.main__leftControls__Buttons > span {
+  padding-top: 5px;
+}
+.main__leftControls__Buttons {
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.main__leftControls__Buttons:hover {
+  background-color: #343434;
+  border-radius: 5px;
+}
+
+.main__leftControls__Buttons > i {
+  margin-bottom: 5px;
+  font-size: large;
+}
+
+.main__leftControls__ButtonsLeave {
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  min-width: 80px;
+  border-radius: 5px;
+  color: #eb534b;
+  height: 60%;
+  margin-right: 10px;
+  transition: all 250ms ease-in-out;
+}
+
+.main__leftControls__ButtonsLeave:hover {
+  background-color: #e02828;
+  color: #d2d2d2;
+}
+
+.main__right {
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242324;
+  border-left: 1px solid #3d3d42;
+}
+
+.main__rightHeader {
+  text-align: center;
+  flex: 0.05;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.main__chatWindow {
+  flex: 0.85;
+}
+.main__messageContainer {
+  width: 100%;
+  flex: 0.1;
+}
+
+.main__messageContainer input {
+  flex-grow: 1;
+  width: 90%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: #f5f5f5;
+}
+
+.main__messageContainer input:focus {
+  outline: none;
 }

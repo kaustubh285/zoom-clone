@@ -119,11 +119,13 @@ video {
 }
 
 .main__chatWindow {
-  flex: 0.85;
+  width: 100%;
+  flex-grow: 1;
+  max-height: 80vh;
+  overflow-y: scroll;
 }
 .main__messageContainer {
   width: 100%;
-  flex: 0.1;
 }
 
 .main__messageContainer input {
@@ -137,4 +139,14 @@ video {
 
 .main__messageContainer input:focus {
   outline: none;
+}
+
+.messages {
+  padding-inline-start: 10px;
+  color: white;
+  list-style: none;
+}
+
+.unmute {
+  color: #cc3b33;
 }

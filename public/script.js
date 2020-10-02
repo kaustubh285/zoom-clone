@@ -8,7 +8,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: 3030,
+  port: 443,
 });
 
 // Get the video and audio from the browser

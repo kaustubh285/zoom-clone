@@ -10,11 +10,14 @@ body {
 .main__left {
   flex: 0.8;
   display: flex;
+
   flex-direction: column;
+  max-width: 85vw;
 }
 
 .main__leftVideo {
-  background-color: #272727;
+  /* background-color: #272727; */
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +34,7 @@ body {
 
 #video-grid {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -74,7 +78,7 @@ video {
 
 .main__leftControls__Buttons > i {
   margin-bottom: 5px;
-  font-size: larger;
+  font-size: large;
 }
 
 .main__leftControls__ButtonsLeave {
@@ -87,7 +91,7 @@ video {
   min-width: 80px;
   border-radius: 5px;
   color: #eb534b;
-  height: 40%;
+  height: 60%;
   margin-right: 10px;
   transition: all 250ms ease-in-out;
 }
@@ -95,4 +99,42 @@ video {
 .main__leftControls__ButtonsLeave:hover {
   background-color: #e02828;
   color: #d2d2d2;
+}
+
+.main__right {
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242324;
+  border-left: 1px solid #3d3d42;
+}
+
+.main__rightHeader {
+  text-align: center;
+  flex: 0.05;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.main__chatWindow {
+  flex: 0.85;
+}
+.main__messageContainer {
+  width: 100%;
+  flex: 0.1;
+}
+
+.main__messageContainer input {
+  flex-grow: 1;
+  width: 90%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  color: #f5f5f5;
+}
+
+.main__messageContainer input:focus {
+  outline: none;
 }

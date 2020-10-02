@@ -1,10 +1,98 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main__left {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__leftVideo {
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex: 0.95;
+}
+.main__leftControls {
+  flex: 0.05;
+}
+
+.main__right {
+  flex: 0.2;
+}
+
 #video-grid {
   display: flex;
   justify-content: center;
 }
 
 video {
+  padding: 5px;
   height: 300px;
   width: 400px;
   object-fit: contain;
+}
+
+.main__leftControls {
+  justify-content: space-between;
+  color: #d2d2d2;
+  background-color: #17181a;
+  display: flex;
+  padding: 10px;
+}
+
+.main__leftControls__Block {
+  align-items: center;
+  display: flex;
+}
+
+.main__leftControls__Buttons > span {
+  padding-top: 5px;
+}
+.main__leftControls__Buttons {
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  min-width: 80px;
+}
+
+.main__leftControls__Buttons:hover {
+  background-color: #343434;
+  border-radius: 5px;
+}
+
+.main__leftControls__Buttons > i {
+  margin-bottom: 5px;
+  font-size: larger;
+}
+
+.main__leftControls__ButtonsLeave {
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  min-width: 80px;
+  border-radius: 5px;
+  color: #eb534b;
+  height: 40%;
+  margin-right: 10px;
+  transition: all 250ms ease-in-out;
+}
+
+.main__leftControls__ButtonsLeave:hover {
+  background-color: #e02828;
+  color: #d2d2d2;
 }

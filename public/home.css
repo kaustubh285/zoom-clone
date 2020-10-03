@@ -1,0 +1,47 @@
+.home__heading {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(1, 1, 1, 0.05);
+}
+
+.home__heading img {
+  height: 70px;
+}
+
+.join__meeing {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.join__meeing > .meeting-form label {
+  font-size: larger;
+
+  padding: 4px;
+}
+
+.join__meeing > .meeting-form input {
+  flex: 0.9;
+  margin: 10px;
+  padding: 5px;
+}
+
+.join__meeing button {
+  width: 10vw;
+}
+
+.create__meeting {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.create__meeting button {
+  width: 18vw;
+}

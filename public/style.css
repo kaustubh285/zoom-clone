@@ -90,7 +90,7 @@ video {
   cursor: pointer;
   min-width: 80px;
   border-radius: 5px;
-  color: #eb534b;
+  color: #eb534b !important;
   height: 60%;
   margin-right: 10px;
   transition: all 250ms ease-in-out;
@@ -137,6 +137,14 @@ video {
   color: #f5f5f5;
 }
 
+.leaveMeeting {
+  color: #eb534b;
+  text-decoration: none !important;
+}
+
+.leaveMeeting:hover {
+  color: #d2d2d2 !important;
+}
 .main__messageContainer input:focus {
   outline: none;
 }

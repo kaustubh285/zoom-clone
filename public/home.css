@@ -1,8 +1,13 @@
+.home {
+  min-height: 90vh;
+}
+
 .home__heading {
   padding: 10px;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(1, 1, 1, 0.05);
@@ -16,6 +21,12 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.meeting-form {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -44,4 +55,23 @@
 
 .create__meeting button {
   width: 18vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .by {
+    font-size: smaller;
+  }
+  .home__heading h3 {
+    margin: 10px;
+    font-size: larger !important;
+  }
+  .home__heading img {
+    height: 40px;
+  }
+  .join__meeing button {
+    width: 250px;
+  }
+  .create__meeting button {
+    width: 300px;
+  }
 }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="home.css" rel="stylesheet" />
+    <!-- <link
+      href="https://bootswatch.com/4/slate/bootstrap.min.css"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <title>Zoom Clone</title>
+  </head>
+  <body>
+    <div class="home">
+      <div class="home__heading">
+        <h5>
+          <a href="https://www.github.com/Kaustubh285">By Kaustubh Deshpande</a>
+        </h5>
+        <h3>Zoom clone</h3>
+        <img
+          src="https://weendeavor.com/wp-content/uploads/2020/03/zoom-logo.png"
+        />
+      </div>
+
+      <div class="alter alert-danger mx-auto w-75 text-center mt-2 p-2">
+        <h4>
+          Hi, Thank-you for using Zoom Clone. This app is developed solely for
+          educational purposes.
+        </h4>
+        <h6>
+          Use of this product, or the source code for commercial use is strictly
+          prohibited.
+        </h6>
+      </div>
+      <div class="join__meeing">
+        <div class="meeting-form">
+          <label>Paste the meeting id here :</label>
+          <input
+            id="meeting-number"
+            type="text"
+            placeholder="Eg: 47464470-a22b-4b2a-932b-b7c1fd2708b2"
+          />
+        </div>
+        <a href="">
+          <button
+            class="btn btn-danger mt-2"
+            type="button"
+            onclick="joinMeeting()"
+          >
+            Join
+          </button>
+        </a>
+      </div>
+      <div class="create__meeting mx-auto">
+        <a href="/call" id="meeting-href">
+          <button class="btn btn-success">
+            Create new Meeting
+            <i class="fa fa-plus ml-3 mr-0" aria-hidden="true"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const joinMeeting = () => {
+        var meetingId = $("#meeting-number").val();
+
+        console.log(meetingId);
+        url = `localhost:3030/${meetingId}`;
+        console.log(url);
+        window.location = url;
+      };
+    </script>
+  </body>
+</html>
